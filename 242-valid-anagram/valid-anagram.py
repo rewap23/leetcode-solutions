@@ -12,6 +12,7 @@ class Solution(object):
         map_s = {}
         map_t = {}
 
+        # adding all keys and values to hasp maps
         for char in s:
             map_s[char] = map_s.get(char, 0) + 1
         for char in t:
