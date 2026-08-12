@@ -4,6 +4,7 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
+        # simple while loop approach but a lot of lines of code
         left = 0
         right = len(s)
         result = 0
