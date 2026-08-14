@@ -5,8 +5,7 @@ class Solution(object):
         :rtype: int
         """
         # O(1) space
-        
-        
+        # O(n) time
         numsMap = {} # creating a hash map 
 
         for num in nums:
