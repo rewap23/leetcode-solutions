@@ -4,6 +4,8 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
+        # same idea as majority element
+        # creating dictionary and storing the number and the amount of times it appears
         numsMap = defaultdict(int)
 
         for num in nums:
