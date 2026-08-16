@@ -5,6 +5,9 @@ class Solution(object):
         :type t: str
         :rtype: str
         """
+        # O(n) time 
+        # O(1) space
+        
         #create hash map or dict for s and t 
         map_s = {}
         map_t = {}
@@ -19,6 +22,6 @@ class Solution(object):
         for char in t:
             map_t[char] = map_t.get(char, 0) + 1
 
-        for key in map_t:
+        for key in map_t: # checking the key values in map_t 
             if map_t[key] > map_s.get(key, 0) or map_t[key] != map_s.get(key, 0):
                 return key
