@@ -11,13 +11,14 @@ class Solution(object):
         # creating two hash maps 
         ransomMap = {}
         magazineMap = {}
-        
+
         for char in ransomNote:
             ransomMap[char] = ransomMap.get(char, 0) + 1
         for char in magazine: 
             magazineMap[char] = magazineMap.get(char, 0) + 1
         
         for key in ransomMap:
+            # essentially if the magazine is smaller than ransomNote 
             if magazineMap.get(key, 0) < ransomMap[key]:
                 return False
         
