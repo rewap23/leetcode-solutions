@@ -4,6 +4,10 @@ class Solution(object):
         :type bills: List[int]
         :rtype: bool
         """
+        # O(n) time
+        # O(1) space
+
+        # storing change as 5s and 10s
         five = 0
         ten = 0
         for n in bills:
