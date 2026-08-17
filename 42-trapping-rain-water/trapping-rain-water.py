@@ -5,6 +5,8 @@ class Solution(object):
         :rtype: int
         """
         # two pointers solution
+        # O(n) time
+        # O(1) space
         
         # base case
         if not height or len(height) < 3:
