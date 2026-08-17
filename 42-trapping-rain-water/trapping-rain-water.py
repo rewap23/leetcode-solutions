@@ -21,12 +21,15 @@ class Solution(object):
 
         # find the minimum of left and right
         while left < right:
+            # if the left is smaller than the right
             if height[left] < height[right]:
+                # then if the left is bigger than the max number of left, set the max number to left
                 if height[left] >= leftMax:
                     leftMax = height[left]
                 else: 
                     trapped_water += leftMax - height[left]
                 left += 1
+            # if the right is smaller than the left
             else:
                 if height[right] >= rightMax:
                     rightMax = height[right]
