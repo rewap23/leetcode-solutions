@@ -12,11 +12,9 @@ class Solution(object):
             if op == 'C': # if op is equal to C
                 points.pop()
             elif op == 'D': # if op is equal to D
-                double = points[-1] * 2
-                points.append(double)
+                points.append(points[-1] * 2)
             elif op == '+': # if op is equal to +
-                sumOf = points[-1] + points[-2]
-                points.append(sumOf)
+                points.append(points[-1] + points[-2])
             else:
                 points.append(int(op)) # has to make sure it is an integer
         
