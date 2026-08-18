@@ -4,6 +4,9 @@ class Solution(object):
         :type asteroids: List[int]
         :rtype: List[int]
         """
+        # stack solution
+        # O(n) time
+        # O(1) space
         stack = []
         # use a stack to keep track of asteroids
         # the order of the other asteroids needs to be preserved
