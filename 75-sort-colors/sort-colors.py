@@ -1,0 +1,27 @@
+class Solution(object):
+    def sortColors(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: None Do not return anything, modify nums in-place instead.
+        """
+        # O(n) time
+        # O(1) space
+        # dutch partitioning flag problem
+        # partitioning array into four groups: red, white, blue, unclassified
+        red = 0
+        white = 0
+        blue = len(nums) - 1
+        # we group all elements of array into unclassified
+        # we iterate through the array as long as white <= blue
+        while white <= blue:
+            if nums[white] == 0:
+                nums[white], nums[red] = nums[red], nums[white]
+                white += 1
+                red += 1
+            elif nums[white] == 1:
+                white += 1
+            else:
+                nums[white], nums[blue] = nums[blue], nums[white]
+                blue -= 1
+
+        return nums
