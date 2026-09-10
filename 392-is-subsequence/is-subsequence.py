@@ -5,12 +5,14 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
+        
         # base case if s is nothing it will always be a subsequence
         if not s:
             return True
         # base case, s cant be a subsequence if larger than t
         if len(s) > len(t):
             return False
+        # method: using a pointer
         seen = 0 
         for char in t:
             if char == s[seen]:
