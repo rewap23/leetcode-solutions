@@ -5,7 +5,8 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        
+        # O(n) time
+        # O(1) space
         # base case if s is nothing it will always be a subsequence
         if not s:
             return True
