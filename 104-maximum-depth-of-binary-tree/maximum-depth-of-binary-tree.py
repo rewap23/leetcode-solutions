@@ -10,6 +10,7 @@ class Solution(object):
         :type root: Optional[TreeNode]
         :rtype: int
         """
+        # O(n) time and space
         # always do base case first
         if root is None:
             return 0
