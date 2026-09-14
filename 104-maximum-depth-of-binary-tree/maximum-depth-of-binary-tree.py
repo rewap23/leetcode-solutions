@@ -15,7 +15,7 @@ class Solution(object):
         if root is None:
             return 0
 
-        # recursive approach to learn
+        # recursive approach to learn - using this function again with left and right roots
         left_depth = self.maxDepth(root.left)
         right_depth = self.maxDepth(root.right)
 
