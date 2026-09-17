@@ -7,6 +7,10 @@ class Solution(object):
         # OA prep
         # one line - transpose a matrix 
         # transpose = list(zip(*matrix))
+        # new_mat = [
+            #list(_) for _ in zip(*matrix)
+        #]
+        #return new_mat
         #initalize rows and columns of the matrix
         rows = len(matrix)
         cols = len(matrix[0])
