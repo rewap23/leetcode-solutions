@@ -12,7 +12,6 @@ class Solution(object):
         # create a grid of the dimensions of the new matrix
         result = [[0] * c for _ in range(r)]
 
-
         if (rows * cols) != (r * c):
             return mat
         
