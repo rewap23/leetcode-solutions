@@ -9,22 +9,28 @@ class Solution(object):
         # O(n) time
         # O(1) space
         
-        if len(nums) == 0:
-            return 
+        #if len(nums) == 0:
+            #return 
 
-        k = k % (len(nums))
+        #k = k % (len(nums))
 
         # write a reverse array function that we can reuse in this function because we have to reverse the entire array first, then reverse the first k elements, then reverse the elements after k
-        def reverse(left, right):
-            while left < right:
-                nums[left], nums[right] = nums[right], nums[left]
-                left += 1
-                right -= 1
+        #def reverse(left, right):
+            #while left < right:
+                #nums[left], nums[right] = nums[right], nums[left]
+                #left += 1
+                #right -= 1
        
-        reverse(0, len(nums) - 1)
-        reverse(0, k - 1)
-        reverse(k, len(nums) - 1)
+        #reverse(0, len(nums) - 1)
+        #reverse(0, k - 1)
+        #reverse(k, len(nums) - 1)
 
+        n = len(nums)
+        k = k % n
+
+        nums.reverse()
+        nums[:k] = nums[:k][::-1]
+        nums[k:] = nums[k:][::-1]
             
         
         
