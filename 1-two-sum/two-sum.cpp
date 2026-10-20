@@ -1,15 +1,13 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        std::unordered_map<int, int> seenMap;
-        // brute force solution
-
+        std::unordered_map<int, int> seenMap; // hashmap
         for (int i = 0; i < nums.size(); i++){
-            for (int j = i+1; j < nums.size(); j++){
-                if (target == (nums[i]+nums[j])){
-                    return {i, j};
-                }
+            int complement = target - nums[i];
+            if (seenMap.find(complement) != seenMap.end()){
+                return {seenMap[complement], i};
             }
+            seenMap[nums[i]] = i;
         }
         return {};
     }
