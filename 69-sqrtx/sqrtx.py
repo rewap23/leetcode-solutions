@@ -4,12 +4,22 @@ class Solution(object):
         :type x: int
         :rtype: int
         """
-        # simple math approach
-        # O(n) time
-        # O(1) space
+        if x < 2:
+            return x
 
-        num = 1
-        while (num * num) <= x:
-            num += 1
-        # round down not up
-        return num - 1
+        left = 0
+        right = x // 2
+
+        while left <= right:
+            mid = (left+right)//2
+            squared = mid * mid
+            if squared == x:
+                return mid
+            elif squared > x:
+                right = mid - 1
+            else:
+                left = mid + 1
+
+        return right
+                
+
