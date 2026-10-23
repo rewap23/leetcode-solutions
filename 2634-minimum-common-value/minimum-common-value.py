@@ -5,17 +5,17 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: int
         """
-        # if the problem mentions sorted, the binary search algorithm can be utilized
-        # Binary Search Solution
-        left = 0
-        left2 = 0
+        # hashset solution
+        # create a set and add all elements of numss1
+        # since the elements are already sorted, this will automatically return the first same value which will be the min same value
+        # traverse through nums2 and if it exists in nums1 return it or else return -1
+        # O(n) space and time
+        seen = set(nums1)
 
-        while left < len(nums1) and left2 < len(nums2):
-            if nums1[left] == nums2[left2]:
-                return nums1[left]
-            elif nums1[left] < nums2[left2]:
-                left += 1
-            else:
-                left2 += 1
-        
+        for num in nums2:
+            if num in seen:
+                return num
+                break
         return -1
+
+        
