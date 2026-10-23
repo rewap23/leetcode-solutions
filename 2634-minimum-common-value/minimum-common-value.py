@@ -6,6 +6,7 @@ class Solution(object):
         :rtype: int
         """
         # if the problem mentions sorted, the binary search algorithm can be utilized
+        # Binary Search Solution
         left = 0
         left2 = 0
 
