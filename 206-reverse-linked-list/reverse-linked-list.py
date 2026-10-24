@@ -9,14 +9,16 @@ class Solution(object):
         :type head: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        # Linked List Solution with Two Pointers
-        prev = None # Pointer One - initialize prev as None
-        curr = head # Pointer Two - start with curr at the head of the list
+        if not head:
+            return None
+        
+        node = None
 
-        while curr: # while the head exists
-            temp = curr.next
-            curr.next = prev
-            prev = curr
-            curr = temp
-
-        return prev
+        while head:
+            nxt = head.next # store the value of next node
+            head.next = node
+            node = head
+            head = nxt
+        
+        return node
+        
